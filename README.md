@@ -1,2 +1,2 @@
 # Knowledge-Graph-Construction-for-Food-Nutrition
-The study addresses this challenge by constructing a food nutrition knowledge graph. It leverages 'Nutrition Science,' 'Chinese Food Composition Table,' and 'Baidu Baike' as data sources. The framework for constructing the food nutrition knowledge graph involves defining seven node labels and twelve relationship types. Additionally, Protégé tool is employed for ontology design of nutrient node labels to achieve a fine-grained representation of nutrient interrelations with other nodes. Finally, triplets are imported into Neo4j for storage and visualization purposes
+
