@@ -11,7 +11,7 @@ Extract, process, and annotate data to build a corpus.
 Manually annotate chapters 2 to 11 of "Nutrition Science."
 Use regular expressions for rule-based extraction of content from the first three chapters of the "Chinese Food Composition Table," focusing on widely consumed and distributed food items.
  
-## 3.ModelDesign:
+## 3.Model Design:
 Focus on nutrition, diseases, and demographics, constructing 7 node labels and 15 relationship types, with a designed pattern layer。
 
 ## 4.Data Fusion:
