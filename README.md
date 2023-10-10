@@ -1,5 +1,8 @@
 # Knowledge-Graph-Construction-for-Food-Nutrition
+The COVID-19 pandemic has prompted heightened attention to personal health, influencing various aspects of life. Studies suggest that a well-established dietary structure positively impacts both physiological and psychological well-being. Despite this, a disparity between nutritional science knowledge and public awareness impedes access to professional dietary guidance. This research seeks to bridge the gap by offering specialized nutritional advice to the general public through the integration of computer science knowledge.
 
+Here's a simplified version of the research process diagram:
+![process diagram](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/process%20diagram.png)
 ## 1.Data Collection:
 Utilize "Nutrition Science," "Chinese Food Composition Table," Baidu Baike, and the Chinese Health and Wellness Website as data sources.
 
@@ -20,6 +23,7 @@ Transform and import data into CSV format, utilizing Python's py2neo functions f
 
 ## 6.Visualization and Recommendations:
 Support basic queries and progressive retrieval.
+
 Its pattern layer is as follows:
 ![pattern_lay](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/pattern%20layer.png)
 Taking the "cardiovascular disease" node as an example, the query results through the command: "MATCH (a:disease{name:"cardiovascular disease")-[r]->(b) RETURN a,b" are as shown in the figure. Through the query, it can be found that nutrients such as "coenzyme q10", "oleic acid" and "arginine" are beneficial to "cardiovascular diseases". Foods such as "spinach" and "cauliflower" are rich in these nutrients and are also good for "cardiovascular diseases", while foods such as "cream", "egg yolk" and "pork" are not good for "cardiovascular diseases". And the special group of "elderly people" are prone to such diseases and should pay attention to a healthy diet.
