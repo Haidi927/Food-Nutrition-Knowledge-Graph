@@ -8,6 +8,7 @@ Utilize "Nutrition Science," "Chinese Food Composition Table," Baidu Baike, and 
 
 ## 2.Data Processing:
 Extract, process, and annotate data to build a corpus.
+
 Manually annotate chapters 2 to 11 of "Nutrition Science."
 Use regular expressions for rule-based extraction of content from the first three chapters of the "Chinese Food Composition Table," focusing on widely consumed and distributed food items.
  
