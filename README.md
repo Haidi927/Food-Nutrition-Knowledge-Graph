@@ -7,10 +7,8 @@ Here's a simplified version of the research process diagram:
 Utilize "Nutrition Science," "Chinese Food Composition Table," Baidu Baike, and the Chinese Health and Wellness Website as data sources.
 
 ## 2.Data Processing:
-Extract, process, and annotate data to build a corpus.
-
-Manually annotate chapters 2 to 11 of "Nutrition Science."
-Use regular expressions for rule-based extraction of content from the first three chapters of the "Chinese Food Composition Table," focusing on widely consumed and distributed food items.
+Extract, process, and annotate data to build a corpus.  
+Manually annotate chapters 2 to 11 of "Nutrition Science."Use regular expressions for rule-based extraction of content from the first three chapters of the "Chinese Food Composition Table," focusing on widely consumed and distributed food items.
  
 ## 3.Model Design:
 Focus on nutrition, diseases, and demographics, constructing 7 node labels and 15 relationship types, with a designed pattern layer。
@@ -19,7 +17,7 @@ Focus on nutrition, diseases, and demographics, constructing 7 node labels and 1
 Address entity heterogeneity issues by designing an entity alignment algorithm based on the attribute of entities being resistant to change, using cosine similarity of word vectors to determine if they represent the same entity.
 
 ## 5.Data Storage:
-Employ the Neo4j graph database to store nutritional data.  
+Employ the Neo4j graph database to store nutritional data.    
 Transform and import data into CSV format, utilizing Python's py2neo functions for entity and relationship creation.
 
 ## 6.Visualization and Recommendations:
