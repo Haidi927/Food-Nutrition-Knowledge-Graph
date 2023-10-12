@@ -18,7 +18,7 @@ Focus on nutrition, diseases, and demographics, constructing 7 node labels and 1
 Address entity heterogeneity issues by designing an entity alignment algorithm based on the attribute of entities being resistant to change, using cosine similarity of word vectors to determine if they represent the same entity.
 
 ## 5.Data Storage:
-Employ the Neo4j graph database to store nutritional data.
+Employ the Neo4j graph database to store nutritional data.  
 Transform and import data into CSV format, utilizing Python's py2neo functions for entity and relationship creation.
 
 ## 6.Visualization and Recommendations:
@@ -26,8 +26,7 @@ Support basic queries and progressive retrieval.
 
 Its pattern layer is as follows:
 ![pattern_lay](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/pattern%20layer.png)
-Taking the "cardiovascular disease" node as an example, the query results through the command: "MATCH (a:disease{name:"cardiovascular disease")-[r]->(b) RETURN a,b" are as shown in the figure. Through the query, it can be found that nutrients such as "coenzyme q10", "oleic acid" and "arginine" are beneficial to "cardiovascular diseases". Foods such as "spinach" and "cauliflower" are rich in these nutrients and are also good for "cardiovascular diseases", while foods such as "cream", "egg yolk" and "pork" are not good for "cardiovascular diseases". And the special group of "elderly people" are prone to such diseases and should pay attention to a healthy diet.
+
 ![sample](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/semple.png)
-Due to the unpublished paper and the confidentiality of the project, we have only published a part of the data as a formal presentation. We have not yet published complete data in the dataset. The complete dataset and the construction method will be fully disclosed after the publication of the paper.
-This team is from the Data Science and Knowledge Engineering Laboratory of Zhengzhou University of Light Industry.
+
 ![lab](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/lab.png)
