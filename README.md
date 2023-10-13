@@ -24,7 +24,7 @@ Transform and import data into CSV format, utilizing Python's py2neo functions f
 Support basic queries and progressive retrieval.
 
 Its pattern layer is as follows:
-![pattern_lay](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/pattern%20layer.png)
+![pattern_lay](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/pattren_lay.png)
 
 ## This is a simple query demo. 
 Take the "cardiovascular disease" node as an example, and query with the command: "MATCH (a:disease{name:“cardiovascular disease”})-[r]->(b) RETURN a,b."
