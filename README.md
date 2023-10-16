@@ -35,4 +35,12 @@ For elderly individuals prone to cardiovascular ailments, it is recommended to i
 
 ## This is a example of a progressive query.
 
+Take the "phosphatidylcholine" node as an example, and query with the command: "MATCH (a:Nutrient{name:“phosphatidylcholine”) RETURN a". It can be observed that phosphatidylcholine is classified within the lipid category.
+![sample_1](https://github.com/Haidi927/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/sample_1.png)
+
+it is considered as the "third nutrient" alongside proteins and vitamins, yet it is not well-known among the public. Double-clicking on this node creates a subgraph centered around phosphatidylcholine.
+
+![sample_2](https://github.com/Haidi927/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/sample_2.png)
+Analysis of the graph indicates that phosphatidylcholine is abundant in food sources such as egg yolks, milk, and soybeans. Recommending increased consumption of phosphatidylcholine-rich foods for the elderly and infants, and advocating moderation for individuals with diabetes and hyperlipidemia, underscores their cardiovascular and neurological benefits. Conversely, caution is advised for patients with gout, who are recommended to abstain from such dietary sources.
+
 ![lab](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/lab.png)
