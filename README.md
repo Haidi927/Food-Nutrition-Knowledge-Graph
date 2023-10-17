@@ -4,7 +4,7 @@ The global COVID-19 pandemic has prompted heightened attention to individual hea
 Here's a simplified version of the research process diagram:
 ![process diagram](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/process%20diagram.png)
 ## 1.Data Collection:
-Utilizing "Nutrition Science," "Chinese Food Composition Table," Baidu Baike, and the Chinese Health and Wellness Website as data sources.
+Utilizing "Nutrition Science," "Chinese Food Composition Table," Wikipedia, and the Chinese Health and Wellness Website as data sources.
 
 ## 2.Data Processing:
 Extract, process, and annotate data to build a corpus.  
