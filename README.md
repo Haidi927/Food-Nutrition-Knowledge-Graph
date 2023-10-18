@@ -20,7 +20,27 @@ Extract, process, and annotate data to build a corpus.
 | Symptom  | The manifestation of a disease, disorder, or abnormal condition  |Stomach ache|
 | Organ | Nutrients, organs, functions, and tissues that non-nutrients act on |Heart|
 
- 
+
+|relationship| Domain    | Range    |Sample|
+| ------ | ------ |------ |------ | 
+|Be beneficial to | Food |Disease|Blueberries are beneficial for high blood fat |
+|Be harmful to | Food |Disease|Eggs are harmful for asthma|
+|Lack | Food |Disease|Lack of nutrient iron can easily lead to iron deficiency anemia |
+|Overdose| Food |Disease|Overdose yogurt can easily lead to gastrointestinal diseases |
+|Rich| Food |Nutrients|Eggs are rich in protein|
+|Rich| Food |Non-nutrients|Apples are rich in dietary fiber|
+|Suitable| Food |Special Populations|Purple cabbage is suitable for infants and young children|
+|Not Suitable| Food |Special Populations|Skim milk is not suitable for infants|
+|Cause| Food |Symptom|Eating grapes and milk at the same time can cause diarrhea|
+|Cause| Disease |Symptom|Prediabetes cause dry mouth and tongue|
+|Act on| Disease |Organ|Coronary heart disease act on the heart|
+|Act on|Symptom |Organ|Abdominal pain often act on the intestines|
+|Easy| Special Populations |Disease|Infants is easy to leukemia|
+|Alias| Nutrients |Nutrients|Lecithin alias is lecithin|
+|Promote absorption| Nutrients |Nutrients|Vitamins promote absorption of the nutrient iron|
+
+
+
 ## 3.Model Design:
 Focus on nutrition, diseases, and demographics, constructing 7 node labels and 15 relationship types, with a designed pattern layer。
 
