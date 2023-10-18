@@ -10,15 +10,15 @@ FNKG crawled nutrition website data, such as [China Health Network](https://www.
 ## 2.Patterns Design
 Extract, process, and annotate data to build a corpus.  
   
-| Definition    | Concept    |sample|
+| Definition    | Concept    |Sample|
 | ------ | ------ |------ |
-|Nutrients| substances with nutritional functionality |protein|
-| non-nutrients | do not have a direct role in maintaining growth and development  |Dietary fiber|
-| disease  | a process in which abnormal life activities occur due to disorders of the body's homeostasis regulation system under certain etiological conditions  |diabetes|
-| food | Substances that supply nutrients and energy needed by organisms to maintain life and promote growth and development.  |milk|
-| special populations  | Groups of people distinguished based on certain characteristics, such as age, gender, physical fitness, etc.  |infants|
-| symptom  | The manifestation of a disease, disorder, or abnormal condition  |stomach ache|
-| organ | Nutrients, organs, functions, and tissues that non-nutrients act on |heart|
+|Nutrients| Substances with nutritional functionality |Protein|
+| Non-nutrients | Do not have a direct role in maintaining growth and development  |Dietary fiber|
+| Disease  | A process in which abnormal life activities occur due to disorders of the body's homeostasis regulation system under certain etiological conditions  |Diabetes|
+| Food | Substances that supply nutrients and energy needed by organisms to maintain life and promote growth and development.  |Milk|
+| Special Populations  | Groups of people distinguished based on certain characteristics, such as age, gender, physical fitness, etc  |Infants|
+| Symptom  | The manifestation of a disease, disorder, or abnormal condition  |Stomach ache|
+| Organ | Nutrients, organs, functions, and tissues that non-nutrients act on |Heart|
 
  
 ## 3.Model Design:
