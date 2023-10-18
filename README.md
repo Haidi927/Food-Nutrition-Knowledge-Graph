@@ -45,17 +45,6 @@ According to the above definition of entities and relationships by FNKG, its Pat
 ## 3.Model Design:
 Focus on nutrition, diseases, and demographics, constructing 7 node labels and 15 relationship types, with a designed pattern layer。
 
-## 4.Data Fusion:
-Address entity heterogeneity issues by designing an entity alignment algorithm based on the attribute of entities being resistant to change, using cosine similarity of word vectors to determine if they represent the same entity.
-
-## 5.Data Storage:
-Employ the Neo4j graph database to store nutritional data.    
-Transform and import data into CSV format, utilizing Python's py2neo functions for entity and relationship creation.
-
-## 6.Visualization and Recommendations:
-Support basic queries and progressive retrieval.
-
-
 
 ## This is a simple query demo. 
 Take the "cardiovascular disease" node as an example, and query with the command: "MATCH (a:disease{name:“cardiovascular disease”})-[r]->(b) RETURN a,b."
