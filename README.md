@@ -1,14 +1,25 @@
-# Knowledge-Graph-Construction-for-Food-Nutrition
-The global COVID-19 pandemic has prompted heightened attention to individual health, influencing various aspects of life. Empirical evidence posits that a well-established dietary structure positively impacts both physiological and psychological well-being. However, a barrier between nutritional science knowledge and public awareness, hindering the populace's access to expert dietary counsel. This research seeks to bridge the gap by offering specialized nutritional advice to the general public through the integration of computer science knowledge.
-
-Here's a simplified version of the research process diagram:
+The COVID-19 pandemic has made us pay more attention to our health than ever before. A balanced diet is an essential component of ensuring good health. The Food Nutrition Knowledge Graph (FNKG) aims to provide users with professional dietary advice.
+# The Construction of Food Nutrition Knowledge Graph
+As shown in the figure below, the construction of FNKG consists of six parts: data integration, patterns design, data processing, data fusion, data storage and visualization.
 ![process diagram](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/process%20diagram.png)
-## 1.Data Collection:
-Utilizing "Nutrition Science," "Chinese Food Composition Table," Wikipedia, and the Chinese Health and Wellness Website as data sources.
+## 1.Data Integration
+"Food Nutrition", as a national planning textbook for higher education in China, focuses on the nutritional value of food, dietary nutrition and health, systematically expounds the basic theories and practical application knowledge and methods of food nutrition, integrating food and diet throughout the book. We selected "Food Nutrition" as the primary data source for FNKG.  
+The "Chinese Food Composition Table" was published by Peking University Medical Press. It covers the nutritional composition data of existing plant foods, animal foods and partial industry foods in China. FNKG selected it as a quantitative indicator to achieve more accurate recommendations.  
+FNKG crawled nutrition website data, such as [China Health Network](https://www.zhys.com/), [Food Partner Network](http://foodmate.net/), and [Baike](https://baike.baidu.com/) to supplement food nutrition data.
 
-## 2.Data Processing:
+## 2.Patterns Design
 Extract, process, and annotate data to build a corpus.  
-Manually annotate chapters 2 to 11 of "Nutrition Science". Using regular expressions for rule-based extraction of content from the first three chapters of the "Chinese Food Composition Table," focusing on widely consumed and distributed food items.
+  
+| Definition    | Concept    |sample|
+| ------ | ------ |------ |
+|Nutrients| substances with nutritional functionality |protein|
+| non-nutrients | do not have a direct role in maintaining growth and development  |Dietary fiber|
+| disease  | a process in which abnormal life activities occur due to disorders of the body's homeostasis regulation system under certain etiological conditions  |diabetes|
+| food | Substances that supply nutrients and energy needed by organisms to maintain life and promote growth and development.  |milk|
+| special populations  | Groups of people distinguished based on certain characteristics, such as age, gender, physical fitness, etc.  |infants|
+| symptom  | The manifestation of a disease, disorder, or abnormal condition  |stomach ache|
+| organ | Nutrients, organs, functions, and tissues that non-nutrients act on |heart|
+
  
 ## 3.Model Design:
 Focus on nutrition, diseases, and demographics, constructing 7 node labels and 15 relationship types, with a designed pattern layer。
