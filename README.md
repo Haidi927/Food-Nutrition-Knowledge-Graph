@@ -8,19 +8,20 @@ The "Chinese Food Composition Table" was published by Peking University Medical 
 FNKG crawled nutrition website data, such as [China Health Network](https://www.zhys.com/), [Food Partner Network](http://foodmate.net/), and [Baike](https://baike.baidu.com/) to supplement food nutrition data.
 
 ## 2.Patterns Design
-FNKG defines seven types of entities and fifteen types of relationships.The seven types of entity categories are shown in the table below.  
+FNKG defines seven types of entities and fifteen types of relationships.The seven types of entity categories are shown in the table below. 
 | Type    | Defination    |Example|
 | ------ | ------ |------ |
 |Nutrients| Substances with nutritional functionality |Protein|
 | Non-nutrients | Substance that does not provide energy but is essential for good health|Dietary fiber|
 | Disease  | A state of abnormal body function|Diabetes|
-| Food | Substances that  maintain life and promote growth and development.  |Milk|
+| Food | Substances that  maintain life and promote growth and development  |Milk|
 | Populations  | Groups of people distinguished based on certain characteristics  |Infants|
-| Symptom  | Discomfort of physical or mental discomfort |Stomach ache|
-| Organ |Body structure that performs function |Heart|
+| Symptom  | Discomfort of physical or mental |Stomachache|
+| Organ |Body structure that performs function |Heart|  
 
-
-|Relationship| Domain    | Range    |Sample|
+FNKG is based on **Nutrients** and **Non-nutrients**, and then conducts quantitative analysis of various **Food**. By defining **Populations**, **Organ**, **Symptom**, and **Disease**, for example, FNKG sets the needs or thresholds of **Populations** nutrients for different groups of people to achieve the purpose of providing more scientific dietary advice.  
+The seven types of relationship of FNKG are shown in the table below.
+|Type| Domain  | Range    |Sample|
 | ------ | ------ |------ |------ | 
 |Be beneficial to | Food |Disease|Blueberries are beneficial for high blood fat |
 |Be harmful to | Food |Disease|Eggs are harmful for asthma|
@@ -36,9 +37,9 @@ FNKG defines seven types of entities and fifteen types of relationships.The seve
 |Act on|Symptom |Organ|Abdominal pain often act on the intestines|
 |Easy| Special Populations |Disease|Infants is easy to leukemia|
 |Alias| Nutrients |Nutrients|Lecithin alias is lecithin|
-|Promote absorption| Nutrients |Nutrients|Vitamins promote absorption of the nutrient iron|
+|Promote absorption| Nutrients |Nutrients|Vitamins promote absorption of the nutrient iron|  
 
-Its Patterns Design is as follows:
+According to the above definition of entities and relationships by FNKG, its Pattern is as shown in the figure below.
 ![pattern_lay](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/pattren_lay.png)
 
 ## 3.Model Design:
