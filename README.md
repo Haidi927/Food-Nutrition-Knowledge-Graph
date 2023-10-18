@@ -8,17 +8,16 @@ The "Chinese Food Composition Table" was published by Peking University Medical 
 FNKG crawled nutrition website data, such as [China Health Network](https://www.zhys.com/), [Food Partner Network](http://foodmate.net/), and [Baike](https://baike.baidu.com/) to supplement food nutrition data.
 
 ## 2.Patterns Design
-Extract, process, and annotate data to build a corpus.  
-  
-| Definition    | Concept    |Sample|
+FNKG defines seven types of entities and fifteen types of relationships.The seven types of entity categories are shown in the table below.  
+| Type    | Defination    |Example|
 | ------ | ------ |------ |
 |Nutrients| Substances with nutritional functionality |Protein|
-| Non-nutrients | Do not have a direct role in maintaining growth and development  |Dietary fiber|
-| Disease  | A process in which abnormal life activities occur due to disorders of the body's homeostasis regulation system under certain etiological conditions  |Diabetes|
-| Food | Substances that supply nutrients and energy needed by organisms to maintain life and promote growth and development.  |Milk|
-| Special Populations  | Groups of people distinguished based on certain characteristics, such as age, gender, physical fitness, etc  |Infants|
-| Symptom  | The manifestation of a disease, disorder, or abnormal condition  |Stomach ache|
-| Organ | Nutrients, organs, functions, and tissues that non-nutrients act on |Heart|
+| Non-nutrients | Substance that does not provide energy but is essential for good health|Dietary fiber|
+| Disease  | A state of abnormal body function|Diabetes|
+| Food | Substances that  maintain life and promote growth and development.  |Milk|
+| Populations  | Groups of people distinguished based on certain characteristics  |Infants|
+| Symptom  | Discomfort of physical or mental discomfort |Stomach ache|
+| Organ |Body structure that performs function |Heart|
 
 
 |Relationship| Domain    | Range    |Sample|
