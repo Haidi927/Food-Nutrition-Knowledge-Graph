@@ -21,7 +21,7 @@ Extract, process, and annotate data to build a corpus.
 | Organ | Nutrients, organs, functions, and tissues that non-nutrients act on |Heart|
 
 
-|relationship| Domain    | Range    |Sample|
+|Relationship| Domain    | Range    |Sample|
 | ------ | ------ |------ |------ | 
 |Be beneficial to | Food |Disease|Blueberries are beneficial for high blood fat |
 |Be harmful to | Food |Disease|Eggs are harmful for asthma|
@@ -39,7 +39,8 @@ Extract, process, and annotate data to build a corpus.
 |Alias| Nutrients |Nutrients|Lecithin alias is lecithin|
 |Promote absorption| Nutrients |Nutrients|Vitamins promote absorption of the nutrient iron|
 
-
+Its Patterns Design is as follows:
+![pattern_lay](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/pattren_lay.png)
 
 ## 3.Model Design:
 Focus on nutrition, diseases, and demographics, constructing 7 node labels and 15 relationship types, with a designed pattern layer。
@@ -54,8 +55,7 @@ Transform and import data into CSV format, utilizing Python's py2neo functions f
 ## 6.Visualization and Recommendations:
 Support basic queries and progressive retrieval.
 
-Its pattern layer is as follows:
-![pattern_lay](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/pattren_lay.png)
+
 
 ## This is a simple query demo. 
 Take the "cardiovascular disease" node as an example, and query with the command: "MATCH (a:disease{name:“cardiovascular disease”})-[r]->(b) RETURN a,b."
