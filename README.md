@@ -20,11 +20,11 @@ FNKG defines seven types of entities and fifteen types of relationships.The seve
 | Organ |Body structure that performs function |Heart|  
 
 FNKG is based on **Nutrients** and **Non-nutrients**, and then conducts quantitative analysis of various **Food**. By defining **Populations**, **Organ**, **Symptom**, and **Disease**, for example, FNKG sets the needs or thresholds of **Populations** nutrients for different groups of people to achieve the purpose of providing more scientific dietary advice.  
-The seven types of relationship of FNKG are shown in the table below.
+The fifteen types of relationship of FNKG are shown in the table below.
 |Type| Domain  | Range    |Sample|
 | ------ | ------ |------ |------ | 
-|Be beneficial to | Food |Disease|Blueberries are beneficial for high blood fat |
-|Be harmful to | Food |Disease|Eggs are harmful for asthma|
+|Be Beneficial To | Food |Disease|Blueberries are beneficial for high blood fat |
+|Be Harmful To | Food |Disease|Eggs are harmful for asthma|
 |Lack | Food |Disease|Lack of nutrient iron can easily lead to iron deficiency anemia |
 |Overdose| Food |Disease|Overdose yogurt can easily lead to gastrointestinal diseases |
 |Rich| Food |Nutrients|Eggs are rich in protein|
@@ -37,7 +37,7 @@ The seven types of relationship of FNKG are shown in the table below.
 |Act on|Symptom |Organ|Abdominal pain often act on the intestines|
 |Easy| Special Populations |Disease|Infants is easy to leukemia|
 |Alias| Nutrients |Nutrients|Lecithin alias is lecithin|
-|Promote absorption| Nutrients |Nutrients|Vitamins promote absorption of the nutrient iron|  
+|Promote Absorption| Nutrients |Nutrients|Vitamins promote absorption of the nutrient iron|  
 
 According to the above definition of entities and relationships by FNKG, its Pattern is as shown in the figure below.
 ![pattern_lay](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/pattren_lay.png)
