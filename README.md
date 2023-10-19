@@ -42,8 +42,8 @@ The fifteen types of relationship of FNKG are shown in the table below.
 According to the above definition of entities and relationships by FNKG, its Pattern is as shown in the figure below.
 ![pattern_lay](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/pattren_lay.png)
 
-## 3.Model Design:
-Focus on nutrition, diseases, and demographics, constructing 7 node labels and 15 relationship types, with a designed pattern layer。
+## 3.Data Process
+
 
 
 ## This is a simple query demo. 
