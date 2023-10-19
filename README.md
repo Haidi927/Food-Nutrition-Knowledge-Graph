@@ -1,7 +1,7 @@
 The COVID-19 pandemic has made us pay more attention to our health than ever before. A balanced diet is an essential component of ensuring good health. The Food Nutrition Knowledge Graph (FNKG) aims to provide users with professional dietary advice.
 # The Construction of Food Nutrition Knowledge Graph
 As shown in the figure below, the construction of FNKG consists of six parts: data integration, patterns design, data processing, data fusion, data storage and visualization.
-![process diagram](https://github.com/Haidi927/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/The%20Framework%20of%20FNKG.png)
+![The Framework of FNKG](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/The%20Framework%20of%20FNKG.png)
 ## 1.Data Integration
 "Food Nutrition", as a national planning textbook for higher education in China, focuses on the nutritional value of food, dietary nutrition and health, systematically expounds the basic theories and practical application knowledge and methods of food nutrition, integrating food and diet throughout the book. We selected "Food Nutrition" as the primary data source for FNKG.  
 The "Chinese Food Composition Table" was published by Peking University Medical Press. It covers the nutritional composition data of existing plant foods, animal foods and partial industry foods in China. FNKG selected it as a quantitative indicator to achieve more accurate recommendations.  
@@ -48,7 +48,7 @@ According to the above definition of entities and relationships by FNKG, its Pat
 
 ## This is a simple query demo. 
 Take the "cardiovascular disease" node as an example, and query with the command: "MATCH (a:disease{name:“cardiovascular disease”})-[r]->(b) RETURN a,b."
-![sample](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/sample.png)
+![simple_query](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/simple_query.png)
 
 
 For elderly individuals prone to cardiovascular ailments, it is recommended to include flavonoid-rich foods like hawthorn and pineapple in their diet. However, if diabetes, a prevalent condition among the elderly, coexists, pineapple consumption should be avoided. Notably, cardiovascular disease may manifest as a complication of iron-deficiency anemia. Supplementation with iron and vitamin C-enriched spinach can effectively curb iron-deficiency anemia and diminish the occurrence of cardiovascular disease.
@@ -56,11 +56,11 @@ For elderly individuals prone to cardiovascular ailments, it is recommended to i
 ## This is a example of a progressive query.
 
 Take the "phosphatidylcholine" node as an example, and query with the command: "MATCH (a:Nutrient{name:“phosphatidylcholine”) RETURN a". It can be observed that phosphatidylcholine is classified within the lipid category.
-![sample_1](https://github.com/Haidi927/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/sample_1.png)
+![progressive_query](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/progressive_query.png)
 
 it is considered as the "third nutrient" alongside proteins and vitamins, yet it is not well-known among the public. Double-clicking on this node creates a subgraph centered around phosphatidylcholine.
 
-![sample_2](https://github.com/Haidi927/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/sample_2.png)
+![progressive_query_result](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/progressive_query_result.png)
 Analysis of the graph indicates that phosphatidylcholine is abundant in food sources such as egg yolks, milk, and soybeans. Recommending increased consumption of phosphatidylcholine-rich foods for the elderly and infants, and advocating moderation for individuals with diabetes and hyperlipidemia, underscores their cardiovascular and neurological benefits. Conversely, caution is advised for patients with gout, who are recommended to abstain from such dietary sources.
 
-![lab](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/lab.png)
+![lab](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/lab.png)
