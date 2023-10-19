@@ -35,12 +35,12 @@ The fifteen types of relationship of FNKG are shown in the table below.
 |Cause| Disease |Symptom|Prediabetes cause dry mouth and tongue|
 |Act on| Disease |Organ|Coronary heart disease act on the heart|
 |Act on|Symptom |Organ|Abdominal pain often act on the intestines|
-|Easy| Special Populations |Disease|Infants is easy to leukemia|
+|Prone to| Special Populations |Disease|Infants is prone to leukemia|
 |Alias| Nutrients |Nutrients|Lecithin alias is lecithin|
 |Promote Absorption| Nutrients |Nutrients|Vitamins promote absorption of the nutrient iron|  
 
 According to the above definition of entities and relationships by FNKG, its Pattern is as shown in the figure below.
-![pattern_lay](https://github.com/haidisuper/Knowledge-Graph-Construction-for-Food-Nutrition/blob/main/pattren_lay.png)
+![pattern](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/pattern.png)
 
 ## 3.Data Process
 
