@@ -48,7 +48,7 @@ According to the definition of the entities and the relationships of FNKG, we de
 
 
 ## A simple query demo. 
-Take the "cardiovascular disease" node as an example, and query with the command: "MATCH (a:disease{name:“cardiovascular disease”})-[r]->(b) RETURN a,b."
+Take the "cardiovascular" node as an example, and query with the command: "MATCH (a:disease{name:“cardiovascular disease”})-[r]->(b) RETURN a,b." The result is shown below.
 ![simple_query](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/simple_query.png)
 
 
@@ -56,12 +56,13 @@ For elderly individuals prone to cardiovascular ailments, it is recommended to i
 
 ## A example of a progressive query.
 
-Take the "phosphatidylcholine" node as an example, and query with the command: "MATCH (a:Nutrient{name:“phosphatidylcholine”) RETURN a". It can be observed that phosphatidylcholine is classified within the lipid category.
+Take the "lecithin" node as an example, and query with the command: "MATCH (a:Nutrient{name:“lecithin”) RETURN a". It can be observed that lecithin is classified within the lipid category.
 ![progressive_query](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/progressive_query.png)
 
-Double-clicking on this node creates a subgraph centered around phosphatidylcholine.
+Double-clicking on this node creates a subgraph centered around lecithin.
 
 ![progressive_query_result](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/progressive_query_result.png)
-Analysis of the graph indicates that phosphatidylcholine is abundant in food sources such as egg yolks, milk, and soybeans. Recommending increased consumption of phosphatidylcholine-rich foods for the elderly and infants, and advocating moderation for individuals with diabetes and hyperlipidemia, underscores their cardiovascular and neurological benefits. Conversely, caution is advised for patients with gout, who are recommended to abstain from such dietary sources.
+Analysis of the graph indicates that foods such as egg yolks, milk, and soybeans are rich in lecithin. The elderly and infants should eat more foods rich in lecithin, and patients with diabetes and hyperlipidemia should also eat more.
+These foods are good for your heart and brain. Patients suffering from gout should avoid this food.
 
 ![lab](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/lab.png)
