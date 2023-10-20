@@ -47,19 +47,19 @@ According to the definition of the entities and the relationships of FNKG, we de
 
 
 
-## This is a simple query demo. 
+## A simple query demo. 
 Take the "cardiovascular disease" node as an example, and query with the command: "MATCH (a:disease{name:“cardiovascular disease”})-[r]->(b) RETURN a,b."
 ![simple_query](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/simple_query.png)
 
 
 For elderly individuals prone to cardiovascular ailments, it is recommended to include flavonoid-rich foods like hawthorn and pineapple in their diet. However, if diabetes, a prevalent condition among the elderly, coexists, pineapple consumption should be avoided. Notably, cardiovascular disease may manifest as a complication of iron-deficiency anemia. Supplementation with iron and vitamin C-enriched spinach can effectively curb iron-deficiency anemia and diminish the occurrence of cardiovascular disease.
 
-## This is a example of a progressive query.
+## A example of a progressive query.
 
 Take the "phosphatidylcholine" node as an example, and query with the command: "MATCH (a:Nutrient{name:“phosphatidylcholine”) RETURN a". It can be observed that phosphatidylcholine is classified within the lipid category.
 ![progressive_query](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/progressive_query.png)
 
-it is considered as the "third nutrient" alongside proteins and vitamins, yet it is not well-known among the public. Double-clicking on this node creates a subgraph centered around phosphatidylcholine.
+Double-clicking on this node creates a subgraph centered around phosphatidylcholine.
 
 ![progressive_query_result](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/progressive_query_result.png)
 Analysis of the graph indicates that phosphatidylcholine is abundant in food sources such as egg yolks, milk, and soybeans. Recommending increased consumption of phosphatidylcholine-rich foods for the elderly and infants, and advocating moderation for individuals with diabetes and hyperlipidemia, underscores their cardiovascular and neurological benefits. Conversely, caution is advised for patients with gout, who are recommended to abstain from such dietary sources.
