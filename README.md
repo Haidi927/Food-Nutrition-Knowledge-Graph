@@ -39,8 +39,9 @@ The fifteen types of relationship of FNKG are shown in the table below.
 |Alias| Nutrients |Nutrients|Lecithin alias is lecithin|
 |Promote Absorption| Nutrients |Nutrients|Vitamins promote absorption of the nutrient iron|  
 
-According to the above definition of entities and relationships by FNKG, its Pattern is as shown in the figure below.
-![pattern](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/pattern.png)
+According to the definition of the entities and the relationships of FNKG, we define the pattern of FNKG as shown in the figure below.
+![pattern](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/pattern.png)  
+**Food** and **Disease** and their relationships are the core of the FNKG, where **Food** are composed of **Nutritent** and **Non-nutrient**. The content and function of various nutrients as attributes of **Nutrition** and **Non-nutrition** support the decision-making of **Food** on **Disease**. The **Disease** is the hub of FNKG, which interacts with **Organ**, **Symptom**, and **Population**.
 
 ## 3.Data Process
 
