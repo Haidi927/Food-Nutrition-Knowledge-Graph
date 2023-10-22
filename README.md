@@ -63,7 +63,7 @@ FNKG aims to provide advice to a wide range of people who need professional diet
 A simple query demo.
 | Question| Query| Return|
 | ------ | ------ |------ |
-|What are all the foods or nutrients that affect cardiovascular disease?|`MATCH (disease:disease{name:“cardiovascular disease”})-[r]->(factors)` RETURN disease, factors|![simple_query](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/simple_query.png)|
+|What are the foods or nutrients that affect cardiovascular disease?|`MATCH (disease:disease{name:“cardiovascular disease”})-[r]->(factors)` RETURN disease, factors|![simple_query](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/simple_query.png)|
 
 
   
