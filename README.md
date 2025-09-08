@@ -1,70 +1,68 @@
-The COVID-19 pandemic has made us pay more attention to our health than ever before. A balanced diet is an essential component of ensuring good health. The Food Nutrition Knowledge Graph (FNKG) aims to provide users with professional dietary advice.
-# The Construction of Food Nutrition Knowledge Graph
-As shown in the figure below, the construction of FNKG consists of six parts: data integration, patterns design, data processing, data fusion, data storage and visualization.
-![The Framework of FNKG](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/The%20Framework%20of%20FNKG.png)
-## 1. Data Integration
-"Food Nutrition", as a national planning textbook for higher education in China, focuses on the nutritional value of food, dietary nutrition and health, systematically expounds the basic theories and practical application knowledge and methods of food nutrition, integrating food and diet throughout the book. We selected "Food Nutrition" as the primary data source for FNKG.  
-  
-  The "Chinese Food Composition Table" was published by Peking University Medical Press. It covers the nutritional composition data of existing plant foods, animal foods and partial industry foods in China. FNKG selected it as a quantitative indicator to achieve more accurate recommendations.  
-  
-  FNKG crawled nutrition website data, such as [China Health Network](https://www.zhys.com/), [Food Partner Network](http://foodmate.net/), and [Baike](https://baike.baidu.com/) to supplement food nutrition data.
+# SpERT: Span-based Entity and Relation Transformer
+PyTorch code for SpERT: "Span-based Entity and Relation Transformer". For a description of the model and experiments, see our paper: https://arxiv.org/abs/1909.07755 (published at ECAI 2020).
 
-## 2. Patterns Design
-FNKG defines seven types of entities and fifteen types of relationships.The seven types of entity categories are shown in the table below. 
-| Type    | Defination    |Example|
-| ------ | ------ |------ |
-|Nutrients| Substances with nutritional functionality |Protein|
-| Non-nutrients | Substance that does not provide energy but is essential for good health|Dietary fiber|
-| Disease  | A state of abnormal body function|Diabetes|
-| Food | Substances that  maintain life and promote growth and development  |Milk|
-| Populations  | Groups of people distinguished based on certain characteristics  |Infants|
-| Symptom  | Discomfort of physical or mental |Stomachache|
-| Organ |Body structure that performs function |Heart|  
+![alt text](http://deepca.cs.hs-rm.de/img/deepca/spert.png)
 
-FNKG is based on **Nutrients** and **Non-nutrients**, and then conducts quantitative analysis of various **Food**. By defining **Populations**, **Organ**, **Symptom**, and **Disease**, for example, FNKG sets the needs or thresholds of **Populations** nutrients for different groups of people to achieve the purpose of providing more scientific dietary advice.  
-  
-  The fifteen types of relationship of FNKG are shown in the table below.
-|Type| Domain  | Range    |Sample|
-| ------ | ------ |------ |------ | 
-|Be Beneficial To | Food |Disease|Blueberries are beneficial for high blood fat |
-|Be Harmful To | Food |Disease|Eggs are harmful for asthma|
-|Lack | Food |Disease|Lack of nutrient iron can easily lead to iron deficiency anemia |
-|Overdose| Food |Disease|Overdose yogurt can easily lead to gastrointestinal diseases |
-|Rich| Food |Nutrients|Eggs are rich in protein|
-|Rich| Food |Non-nutrients|Apples are rich in dietary fiber|
-|Suitable| Food |Special Populations|Purple cabbage is suitable for infants and young children|
-|Not Suitable| Food |Special Populations|Skim milk is not suitable for infants|
-|Cause| Food |Symptom|Eating grapes and milk at the same time can cause diarrhea|
-|Cause| Disease |Symptom|Prediabetes cause dry mouth and tongue|
-|Act on| Disease |Organ|Coronary heart disease act on the heart|
-|Act on|Symptom |Organ|Abdominal pain often act on the intestines|
-|Prone to| Special Populations |Disease|Infants is prone to leukemia|
-|Alias| Nutrients |Nutrients|Lecithin alias is lecithin|
-|Promote Absorption| Nutrients |Nutrients|Vitamins promote absorption of the nutrient iron|  
+## Setup
+### Requirements
+- Required
+  - Python 3.5+
+  - PyTorch (tested with version 1.4.0)
+  - transformers (+sentencepiece, e.g. with 'pip install transformers[sentencepiece]', tested with version 4.1.1)
+  - scikit-learn (tested with version 0.24.0)
+  - tqdm (tested with version 4.55.1)
+  - numpy (tested with version 1.17.4)
+- Optional
+  - jinja2 (tested with version 2.10.3) - if installed, used to export relation extraction examples
+  - tensorboardX (tested with version 1.6) - if installed, used to save training process to tensorboard
+  - spacy (tested with version 3.0.1) - if installed, used to tokenize sentences for prediction
 
-  
-  According to the definition of the entities and the relationships of FNKG, we define the pattern of FNKG as shown in the figure below.
-![pattern](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/pattern.png)  
-**Food** and **Disease** and their relationships are the core of the FNKG, where **Food** are composed of **Nutritent** and **Non-nutrient**. The content and function of various nutrients as attributes of **Nutrition** and **Non-nutrition** support the decision-making of **Food** on **Disease**. The **Disease** is the hub of FNKG, which interacts with **Organ**, **Symptom**, and **Population**.
+### Fetch data
+Fetch converted (to specific JSON format) CoNLL04 \[1\] (we use the same split as \[4\]), SciERC \[2\] and ADE \[3\] datasets (see referenced papers for the original datasets):
+```
+bash ./scripts/fetch_datasets.sh
+```
 
-## 3. Data Alignment*  
-From the data sources described in the ***Data Integration***, we have integrated multiple accessible databases, including the manually constructed [FNKG pattern database](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/dataset/demo_dataset.csv), the food nutrient content database constructed by automated tools, and [Ta-da-recipe-dataset](https://github.com/Eimo-Bai/Ta-da-recipe-dataset).  
-  
-  **In future work, FNKG needs to integrate these three heterogeneous databases to achieve better quantitative reasoning.**
-## 4. Visualization*  
-FNKG aims to provide advice to a wide range of people who need professional dietary advice, so it needs to provide visualization methods that meet the habits of all age groups.  
+Fetch model checkpoints (best out of 5 runs for each dataset):
+```
+bash ./scripts/fetch_models.sh
+```
+The attached ADE model was trained on split "1" ("ade_split_1_train.json" / "ade_split_1_test.json") under "data/datasets/ade".
 
-  
-**In future work, FNKG will be released in the form of a product, with the purpose of privately customized AI nutritionists to record people's eating habits, provide dietary advice, and ensure a healthy life.**
+## Examples
+(1) Train CoNLL04 on train dataset, evaluate on dev dataset:
+```
+python ./spert.py train --config configs/example_train.conf
+```
+
+(2) Evaluate the CoNLL04 model on test dataset:
+```
+python ./spert.py eval --config configs/example_eval.conf
+```
+
+(3) Use the CoNLL04 model for prediction. See the file 'data/datasets/conll04/conll04_prediction_example.json' for supported data formats. You have three options to specify the input sentences, choose the one that suits your needs. If the dataset contains raw sentences, 'spacy' must be installed for tokenization. Download a spacy model via 'python -m spacy download model_label' and set it as spacy_model in the configuration file (see 'configs/example_predict.conf'). 
+```
+python ./spert.py predict --config configs/example_predict.conf
+```
+## Reproduction of Experimental Results
+- The final models were trained on the combined train+dev datasets (e.g. 'conll04_train_dev.json').
+- Reproduction of SciERC results: To add a feature, the sampling of negative symmetric relations needed to be changed in commit [7b27b7d](https://github.com/lavis-nlp/spert/commit/7b27b7d258d0b4bb44103b9d0f9e19f2ce08611f). This lead to a slight improvement of experimental results for SciERC. Please use commit [3f4ab22](https://github.com/lavis-nlp/spert/commit/3f4ab22857f9ca0d96b582084a2a0ceb3e9826f9) if you want an exact reproduction of the ECAI 2020 paper results.
 
 
+## Additional Notes
+- To train SpERT with SciBERT \[5\] download SciBERT from https://github.com/allenai/scibert (under "PyTorch HuggingFace Models") and set "model_path" and "tokenizer_path" in the config file to point to the SciBERT directory.
+- If the model predicts many false positive entity mentions, try to increase the number of negative entity samples ('neg_entity_count' in config file).
+- You can call "python ./spert.py train --help" / "python ./spert.py eval --help" "python ./spert.py predict --help" for a description of training/evaluation/prediction arguments.
+- Please cite our paper when you use SpERT: <br/>
+```
+Markus Eberts, Adrian Ulges. Span-based Joint Entity and Relation Extraction with Transformer Pre-training. 24th European Conference on Artificial Intelligence, 2020.
+```
 
-# Demonstration
-A simple query demo.
-| Question| Query| Return|
-| ------ | ------ |------ |
-|What are the foods or nutrients that affect cardiovascular disease?|`MATCH (disease:disease{name:“cardiovascular disease”})-[r]->(factors)` RETURN disease, factors|![simple_query](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/simple_query.png)|
-
-
-  
-![lab](https://github.com/Haidi927/Food-Nutrition-Knowledge-Graph/blob/main/picture/lab.png)
+## References
+```
+[1] Dan Roth and Wen-tau Yih, ‘A Linear Programming Formulation forGlobal Inference in Natural Language Tasks’, in Proc. of CoNLL 2004 at HLT-NAACL 2004, pp. 1–8, Boston, Massachusetts, USA, (May 6 -May 7 2004). ACL.
+[2] Yi Luan, Luheng He, Mari Ostendorf, and Hannaneh Hajishirzi, ‘Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction’, in Proc. of EMNLP 2018, pp. 3219–3232, Brussels, Belgium, (October-November 2018). ACL.
+[3] Harsha Gurulingappa, Abdul Mateen Rajput, Angus Roberts, JulianeFluck,  Martin  Hofmann-Apitius,  and  Luca  Toldo,  ‘Development  of a  Benchmark  Corpus  to  Support  the  Automatic  Extraction  of  Drug-related Adverse Effects from Medical Case Reports’, J. of BiomedicalInformatics,45(5), 885–892, (October 2012).
+[4] Pankaj Gupta,  Hinrich Schütze, and Bernt Andrassy, ‘Table Filling Multi-Task Recurrent  Neural  Network  for  Joint  Entity  and  Relation Extraction’, in Proc. of COLING 2016, pp. 2537–2547, Osaka, Japan, (December 2016). The COLING 2016 Organizing Committee.
+[5] Iz Beltagy, Kyle Lo, and Arman Cohan, ‘SciBERT: A Pretrained Language Model for Scientific Text’, in EMNLP, (2019).
+```
